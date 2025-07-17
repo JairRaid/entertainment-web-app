@@ -46,7 +46,7 @@ function TrendingThumbnail({
         </picture>
         <button className="play-ui">
           <div className="play-button">
-            <img src="/assets/icon-play.svg" alt="play icon" />
+            <img src="assets/icon-play.svg" alt="play icon" />
             <p>Play</p>
           </div>
         </button>
@@ -55,7 +55,7 @@ function TrendingThumbnail({
         <div className="movie-info md:text-[0.9375rem]">
           <p>{year}</p>•
           <p className="flex items-center gap-x-2">
-            <img src="/assets/icon-category-movie.svg" alt="icon movie" />{" "}
+            <img src="assets/icon-category-movie.svg" alt="icon movie" />{" "}
             {category}
           </p>
           •<p>{rating}</p>
@@ -70,8 +70,8 @@ function TrendingThumbnail({
         <img
           src={
             isBookmarked
-              ? "/assets/icon-bookmark-full.svg"
-              : "/assets/icon-bookmark-empty.svg"
+              ? "assets/icon-bookmark-full.svg"
+              : "assets/icon-bookmark-empty.svg"
           }
           alt="bookmark icon"
         />
