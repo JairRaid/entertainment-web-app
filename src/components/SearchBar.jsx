@@ -62,7 +62,7 @@ function SearchBar() {
   return (
     <form className="search-bar">
       <img
-        src="/assets/icon-search.svg"
+        src="assets/icon-search.svg"
         alt="search icon"
         className="size-6 md:size-8"
       />
