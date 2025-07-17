@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue950: #10141e;
+  --color-blue900: #161d2f;
+  --color-blue500: #5a698f;
+  --color-red500: #fc4747;
+
+  --font-outfit: "Outfit", sans-serif;
+}
+
+@layer base {
+  html {
+    @apply w-full;
+  }
+  body {
+    @apply font-outfit bg-blue950 border w-full h-screen lg:flex lg:justify-center;
+  }
+
+  #root {
+    @apply lg:w-full h-screen md:p-6 lg:p-8;
+  }
+
+  h2 {
+    @apply text-white text-[1.25rem] font-light leading-[125%] tracking-[0.3px];
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .search-bar {
+    @apply flex items-center gap-x-4;
+  }
+
+  .search-input {
+    @apply text-[1rem] md:text-[1.5rem] font-light leading-[125%] bg-none text-white outline-none w-full;
+  }
+
+  .menu-bar {
+    @apply flex items-center justify-between lg:fixed lg:z-10 lg:min-h-[calc(100%-64px)] lg:flex-col bg-blue900 p-4 md:p-5 lg:px-7 lg:py-[33.7px];
+  }
+
+  .menu-bar h1 {
+    @apply w-[25px] md:w-[32px] lg:mb-[72px];
+  }
+
+  .menu-bar menu {
+    @apply flex items-center gap-x-6 md:gap-x-8 lg:flex-col lg:items-center lg:gap-y-10 lg:mb-auto;
+  }
+
+  .menu-bar a {
+    @apply size-4 md:size-5 transition;
+  }
+
+  menu .is-active {
+    @apply filter-[brightness(0)_saturate(100%)_invert(100%)_sepia(1%)_saturate(7500%)_hue-rotate(103deg)_brightness(106%)_contrast(105%)];
+  }
+
+  .avatar {
+    @apply size-6 md:size-8 rounded-full shadow-[inset_0_0_0_1px_white] lg:mt-[72px];
+  }
+
+  .avatar img {
+    @apply p-[1px];
+  }
+
+  .movie-info {
+    @apply flex items-center gap-x-2 text-white/75 text-[0.75rem] font-light;
+  }
+
+  .trending-title {
+    @apply text-white text-[0.9375rem] md:text-[1.5rem] font-medium leading-[125%];
+  }
+
+  .thumbnail-container {
+    @apply relative;
+  }
+
+  .play-ui {
+    @apply absolute top-0 left-0 size-full flex items-center justify-center bg-black/50 opacity-0 transition hover:opacity-100;
+  }
+
+  .play-ui .play-button {
+    @apply text-white p-[9px] pr-[24px] flex items-center gap-[19px] bg-white/25 rounded-full;
+  }
+
+  /* From Uiverse.io by satyamchaudharydev */
+  .loading {
+    --speed-of-animation: 0.9s;
+    --gap: 6px;
+    --first-color: #4c86f9;
+    --second-color: #49a84c;
+    --third-color: #f6bb02;
+    --fourth-color: #f6bb02;
+    --fifth-color: #2196f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    gap: 6px;
+    height: 100px;
+  }
+
+  .loading span {
+    width: 4px;
+    height: 50px;
+    background: var(--first-color);
+    animation: scale var(--speed-of-animation) ease-in-out infinite;
+  }
+
+  .loading span:nth-child(2) {
+    background: var(--second-color);
+    animation-delay: -0.8s;
+  }
+
+  .loading span:nth-child(3) {
+    background: var(--third-color);
+    animation-delay: -0.7s;
+  }
+
+  .loading span:nth-child(4) {
+    background: var(--fourth-color);
+    animation-delay: -0.6s;
+  }
+
+  .loading span:nth-child(5) {
+    background: var(--fifth-color);
+    animation-delay: -0.5s;
+  }
+
+  @keyframes scale {
+    0%,
+    40%,
+    100% {
+      transform: scaleY(0.05);
+    }
+
+    20% {
+      transform: scaleY(1);
+    }
+  }
+}
