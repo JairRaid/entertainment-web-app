@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL: https://github.com/JairRaid/entertainment-web-app
+- Live Site URL: https://jairraid.github.io/entertainment-web-app/
 
 ## My process
 
